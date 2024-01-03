@@ -42,3 +42,4 @@ You can preview the production build with `npm run preview`.
 ### Helpful References 
 - [How to use sass in sveltekit](https://www.youtube.com/watch?v=UzjJ5orVoxk)
 - [Cat](https://codepen.io/johanmouchet/pen/OXxvqM)
+- [Deploying Svelte to Github Pages](https://kit.svelte.dev/docs/adapter-static)
