@@ -24,18 +24,22 @@
     }
 
     .name {
-        font-size: clamp(60px, 15vw, 120px);
+        font-size: clamp(60px, 15vw, 110px);
         margin: 0;
-        color: whitesmoke;
+        color: white;
 
     }
 
     .subtitle {
         font-size:  clamp(20px, 5vw, 40px);
         margin: 0;
-        color: whitesmoke;
+        color: white;
     }
 
+
+    .subtitle-item {
+        animation: fadeIn 2s ease-in-out forwards;
+    }
 </style>
 
 <body>
@@ -43,7 +47,5 @@
         <Cat/>
     </div>
     <p class="name">GAJIN KIM</p>
-    <p class="subtitle">AWS Cloud Enthusiast</p>
-    <div id="colorful-streak"></div>
-
+    <p class="subtitle" ><span class="subtitle item" style="color:#FF9900;">AWS Cloud</span> Enthusiast</p>
 </body>

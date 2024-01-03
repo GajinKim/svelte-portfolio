@@ -1,6 +1,6 @@
 <style lang="scss">
 $color-black: black;
-$color-white: #fff;
+$color-white: white;
 $size: 170px; // (Fully responsive)
 
 // Cat
