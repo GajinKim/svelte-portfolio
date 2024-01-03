@@ -194,31 +194,35 @@ $size: 170px; // (Fully responsive)
 </style>
 
 <script>
-document.addEventListener('mousemove', (event) => {
-    const eyes = document.querySelectorAll('.eye-pupil');
+import { onMount } from 'svelte';
 
-    // Calculate the center point between the eyes
-    const eye1Rect = eyes[0].getBoundingClientRect();
-    const eye2Rect = eyes[1].getBoundingClientRect();
-    const centerX = (eye1Rect.left + eye2Rect.right) / 2;
-    const centerY = (eye1Rect.top + eye2Rect.bottom) / 2;
+onMount(() => {
+	document.addEventListener('mousemove', (event) => {
+		const eyes = document.querySelectorAll('.eye-pupil');
 
-    eyes.forEach(eye => {
-        const { width, height } = eye.getBoundingClientRect();
-        const mouseX = event.clientX;
-        const mouseY = event.clientY;
-        const deltaX = mouseX - centerX;
-        const deltaY = mouseY - centerY;
-        const angle = Math.atan2(deltaY, deltaX);
+		// Calculate the center point between the eyes
+		const eye1Rect = eyes[0].getBoundingClientRect();
+		const eye2Rect = eyes[1].getBoundingClientRect();
+		const centerX = (eye1Rect.left + eye2Rect.right) / 2;
+		const centerY = (eye1Rect.top + eye2Rect.bottom) / 2;
 
-        // Adjust the max movement as needed
-        const maxMovement = Math.min(width, height) / 0.8;
-        const distance = Math.min(maxMovement, Math.hypot(deltaX, deltaY));
+		eyes.forEach(eye => {
+			const { width, height } = eye.getBoundingClientRect();
+			const mouseX = event.clientX;
+			const mouseY = event.clientY;
+			const deltaX = mouseX - centerX;
+			const deltaY = mouseY - centerY;
+			const angle = Math.atan2(deltaY, deltaX);
 
-        const eyeX = distance * Math.cos(angle);
-        const eyeY = distance * Math.sin(angle);
-        eye.style.transform = `translate(${eyeX}px, ${eyeY}px)`;
-    });
+			// Adjust the max movement as needed
+			const maxMovement = Math.min(width, height) / 0.8;
+			const distance = Math.min(maxMovement, Math.hypot(deltaX, deltaY));
+
+			const eyeX = distance * Math.cos(angle);
+			const eyeY = distance * Math.sin(angle);
+			eye.style.transform = `translate(${eyeX}px, ${eyeY}px)`;
+		});
+	});
 });
 </script>
 
