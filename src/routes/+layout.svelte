@@ -1,12 +1,16 @@
+<script>
+    import { base } from '$app/paths';
+  </script>
+
 <nav class="navbar">
 
     <div  class="navbar-left">
-	    <a href="/">Home</a>
+	    <a href="{base}/">Home</a>
     </div>
 
     <div class="navbar-right">
-        <a href="/about">About</a>
-        <a href="/settings">Settings</a>
+        <a href="{base}/about">About</a>
+        <a href="{base}/settings">Settings</a>
         <a href="https://github.com/gajinkim">GitHub</a>
     </div>
 
