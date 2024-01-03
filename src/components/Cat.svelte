@@ -220,6 +220,7 @@ onMount(() => {
 
 			const eyeX = distance * Math.cos(angle);
 			const eyeY = distance * Math.sin(angle);
+			// @ts-ignore
 			eye.style.transform = `translate(${eyeX}px, ${eyeY}px)`;
 		});
 	});
