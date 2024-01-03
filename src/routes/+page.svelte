@@ -26,14 +26,14 @@
     .name {
         font-size: clamp(60px, 15vw, 110px);
         margin: 0;
-        color: white;
+        color: whitesmoke;
 
     }
 
     .subtitle {
         font-size:  clamp(20px, 5vw, 40px);
         margin: 0;
-        color: white;
+        color: whitesmoke;
     }
 
 

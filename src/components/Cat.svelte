@@ -1,6 +1,6 @@
 <style lang="scss">
 $color-black: black;
-$color-white: white;
+$color-white: whitesmoke;
 $size: 170px; // (Fully responsive)
 
 // Cat
@@ -141,18 +141,22 @@ $size: 170px; // (Fully responsive)
 	width: 20%;
 	background: $color-black;
 	border-radius: 50%;
-	animation: look-around 4s infinite;
-	
-	@keyframes look-around {
-		0% { transform: translate(0) }
-		5% { transform: translate(50%, -25%) }
-		10% { transform: translate(50%, -25%) }
-		15% { transform: translate(-100%, -25%) }
-		20% { transform: translate(-100%, -25%) }
-		25% { transform: translate(0, 0) }
-		100% { transform: translate(0, 0) }
-	}
-	
+
+    // on mobile phones use default animation since no mouse cursor
+    @media (pointer:none), (pointer:coarse) {
+        animation: look-around 4s infinite;
+        
+        @keyframes look-around {
+            0% { transform: translate(0) }
+            5% { transform: translate(50%, -25%) }
+            10% { transform: translate(50%, -25%) }
+            15% { transform: translate(-100%, -25%) }
+            20% { transform: translate(-100%, -25%) }
+            25% { transform: translate(0, 0) }
+            100% { transform: translate(0, 0) }
+        }
+    }
+
 	.eye--left & {
 		right: 30%;
 	}
@@ -188,6 +192,35 @@ $size: 170px; // (Fully responsive)
 
 
 </style>
+
+<script>
+document.addEventListener('mousemove', (event) => {
+    const eyes = document.querySelectorAll('.eye-pupil');
+
+    // Calculate the center point between the eyes
+    const eye1Rect = eyes[0].getBoundingClientRect();
+    const eye2Rect = eyes[1].getBoundingClientRect();
+    const centerX = (eye1Rect.left + eye2Rect.right) / 2;
+    const centerY = (eye1Rect.top + eye2Rect.bottom) / 2;
+
+    eyes.forEach(eye => {
+        const { width, height } = eye.getBoundingClientRect();
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+        const deltaX = mouseX - centerX;
+        const deltaY = mouseY - centerY;
+        const angle = Math.atan2(deltaY, deltaX);
+
+        // Adjust the max movement as needed
+        const maxMovement = Math.min(width, height) / 0.8;
+        const distance = Math.min(maxMovement, Math.hypot(deltaX, deltaY));
+
+        const eyeX = distance * Math.cos(angle);
+        const eyeY = distance * Math.sin(angle);
+        eye.style.transform = `translate(${eyeX}px, ${eyeY}px)`;
+    });
+});
+</script>
 
 <div class="cat">
 	<div class="ear ear--left"></div>
