@@ -35,11 +35,6 @@
         margin: 0;
         color: whitesmoke;
     }
-
-
-    .subtitle-item {
-        animation: fadeIn 2s ease-in-out forwards;
-    }
 </style>
 
 <main>
