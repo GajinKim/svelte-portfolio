@@ -9,7 +9,7 @@
         background-color: black;
     }
 
-    body {
+    main {
         font-family: "Alata", sans-serif;
         text-align: center;
         padding-top: 25vh;
@@ -42,10 +42,10 @@
     }
 </style>
 
-<body>
+<main>
     <div class="cat">
         <Cat/>
     </div>
     <p class="name">GAJIN KIM</p>
     <p class="subtitle" ><span class="subtitle item" style="color:#FF9900;">AWS Cloud</span> Enthusiast</p>
-</body>
+</main>

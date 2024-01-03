@@ -30,6 +30,6 @@
 
 </style>
 
-<body>
+<main>
     <slot></slot>
-</body>
+</main>
