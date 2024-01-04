@@ -1,73 +1,139 @@
-<script>
-    import Cat from '../lib/Cat.svelte';
-</script>
-
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic SC">
 
-<style>
+<script>
+    import Cat from '../lib/Cat.svelte';
+    import AboutPage from '../routes/about/+page.svelte'
+</script>
+
+
+<style lang="scss">
+    $color-black: #100c08;
+    $color-white: #f4f3d7;
+    $color-beige: #ecc298;
+
+    $blink-purple: 0 0 5px #bf00ff, 0 0 15px #bf00ff, 0 0 20px #bf00ff, 0 0 40px #bf00ff, 0 0 60px #6f00ff, 0 0 10px #bf00ff, 0 0 98px #6f00ff;
+    $blink-orange: 0 0 5px #FF9900, 0 0 15px #FF9900, 0 0 20px #FF9900, 0 0 40px #FF9900, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    $blink-brown: 0 0 5px rgb(95, 31, 31), 0 0 15px rgb(95, 31, 31), 0 0 20px rgb(95, 31, 31), 0 0 40px rgb(95, 31, 31), 0 0 60px brown, 0 0 10px rgb(95, 31, 31), 0 0 98px brown;
+
     :global(body) {
-        background-color: black;
+        background-color: $color-black;
     }
 
-    main {
+    #home-page {
         font-family: "Amatic SC", sans-serif;
         text-align: center;
-        padding-top: 20vh;
-        padding-left: max(5px, 20vw);
-        padding-right: max(5px, 20vw);
+        height: min(950px, 85vh);
+        position: sticky;
     }
 
     .cat {
+        padding-top: max(80px, 6vh);
         display: flex;
-        justify-content: center; /* Center horizontally */
-        align-items: center; /* Center vertically */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .name-intro {
+        font-size: clamp(80px, 16vw, 120px);
+        margin: 0;
+        color: $color-beige;
     }
 
     .name {
-        font-size: clamp(50px, 15vw, 100px);
+        font-size: clamp(80px, 16vw, 120px);
         margin: 0;
-        color: whitesmoke;
-
+        color: $color-white;
     }
 
     .subtitle {
-        font-size:  clamp(20px, 6vw, 40px);
-        margin: max(20px, 1.5vh);
-        color: whitesmoke;
+        font-size:  clamp(30px, 5vw, 45px);
+        margin-top: 50px;
+        color: $color-white;
     }
 
     .aws-subtitle {
-        font-size:  clamp(20px, 6vw, 40px);
-        line-height: clamp(20px, 6vw, 40px);
-        text-shadow: 0 0 5px #FF9900, 0 0 15px #FF9900, 0 0 20px #FF9900, 0 0 40px #FF9900, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-        color: #fff6a9;
+        line-height: clamp(20px, 6vw, 50px);
+        text-shadow: $blink-orange;
+        color: $color-white;
         text-align: center;
         animation: blinkorange 12s infinite;
     }
 
-    @keyframes blinkorange {
-        20%,24%,
-        55% {
-            color: black;
+    .swe-subtitle {
+        line-height: clamp(20px, 6vw, 40px);
+        text-shadow: $blink-purple;
+        color: $color-white;
+        text-align: center;
+        animation: blinkpurple 12s infinite;
+    }
+    
+    .coffee-subtitle {
+        line-height: clamp(20px, 6vw, 40px);
+        text-shadow: $blink-brown;
+        color: $color-white;
+        text-align: center;
+        animation: blinkbrown 12s infinite;
+    }
+
+    @keyframes blinkpurple {
+        30%, 70%, 90% {
+            color: $color-black;
             text-shadow: none;
         }
-        0%, 19%, 21%, 23%, 25%, 54%, 56%,
-        100% {
-        text-shadow: 0 0 5px #FF9900, 0 0 15px #FF9900, 0 0 20px #FF9900, 0 0 40px #FF9900, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-            color: #fff6a9;
+        0%,  29%, 31%, 69%, 71%, 89%, 91%, 100% {
+            text-shadow: $blink-purple;
+            color: white;
+        }
+    }
+
+    @keyframes blinkorange {
+        10%, 50%, 95% {
+            color: $color-black;
+            text-shadow: none;
+        }
+        0%, 9%, 11%, 49%, 51%, 95%, 96%, 100% {
+            text-shadow: $blink-orange;
+            color: white;
+        }
+    }
+
+    @keyframes blinkbrown {
+        30%, 60%, 80% {
+            color: $color-black;
+            text-shadow: none;
+        }
+        0%,  29%, 31%, 59%, 61%, 79%, 81%, 100% {
+            text-shadow: $blink-brown;
+            color: white;
         }
     }
 </style>
 
 <main>
-    <div class="cat">
-        <Cat/>
+    <div id="home-page">
+        <div class="cat">
+            <Cat/>
+        </div>
+        
+        <p class="name"><span class="name-intro">Hi, I'm </span>Gajin</p>
+        <!-- move this to below in the about me section -->
+        <!-- <p class="subtitle">Software Consultant at Source Allies with <span class="aws-subtitle">4+ years of experience</span>. <br/>
+            Specializing in <span class="aws-subtitle">AWS Cloud Architecture</span>, let's turn <b>bold ideas</b> into <b>reality</b>!
+        </p> -->
+        <p class="subtitle"> 
+            / * 
+            <br>
+            <b class="swe-subtitle">Software</b> 
+            Engineer,
+            <br>
+            <b class="aws-subtitle">AWS Cloud</b>
+            Enthusiast,
+            <br>
+            <b class="coffee-subtitle">Coffee & Boba </b>
+            Extraordinaire
+            <br>
+            * /
+        </p>
     </div>
-    <p class="name">Hello, I'm Gajin!</p>
-
-    <!-- move this to below in the about me section -->
-    <!-- <p class="subtitle">Software Consultant at Source Allies with <span class="aws-subtitle">4+ years of experience</span>. <br/>
-        Specializing in <span class="aws-subtitle">AWS Cloud Architecture</span>, let's turn <b>bold ideas</b> into <b>reality</b>!
-    </p> -->
-    <p class="subtitle"><span class="software-subtitle">Software Consultant</span> , <span class="aws-subtitle">AWS</span> Enthusiast // Mentor</p>
+    <AboutPage /> <!-- add a section where i add my aws certificates-->
 </main>
