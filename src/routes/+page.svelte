@@ -3,6 +3,7 @@
 <script>
     import Cat from '../lib/Cat.svelte';
     import AboutPage from '../routes/about/+page.svelte'
+    import WorkPage from '../routes/work/+page.svelte'
 </script>
 
 
@@ -139,5 +140,8 @@
     </div>
     <div id="about">
         <AboutPage /> <!-- add a section where i add my aws certificates-->
+    </div>
+    <div id="work">
+        <WorkPage /> <!-- add a section where i add my aws certificates-->
     </div>
 </main>
