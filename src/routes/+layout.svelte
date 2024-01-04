@@ -9,8 +9,8 @@
         <span class="navbar-slashes">//</span> 
         <span class="navbar-text">HOME</span>
     </a>
-    <a class="navbar-item" href="{base}/about"><span class="navbar-slashes">//</span> <span class="navbar-text">ABOUT ME</span></a>
-    <a class="navbar-item" href="{base}/work"><span class="navbar-slashes">//</span> <span class="navbar-text">WORK</span></a>
+    <a class="navbar-item" href="{base}/#about"><span class="navbar-slashes">//</span> <span class="navbar-text">ABOUT</span></a>
+    <a class="navbar-item" href="{base}/#work"><span class="navbar-slashes">//</span> <span class="navbar-text">WORK</span></a>
     <a class="navbar-item" href="https://github.com/gajinkim"><span class="navbar-slashes">//</span> <span class="navbar-text">GITHUB</span></a>
 </nav>
 

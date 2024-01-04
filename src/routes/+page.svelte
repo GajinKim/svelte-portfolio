@@ -135,5 +135,7 @@
             */
         </p>
     </div>
-    <AboutPage /> <!-- add a section where i add my aws certificates-->
+    <div id="about">
+        <AboutPage /> <!-- add a section where i add my aws certificates-->
+    </div>
 </main>
