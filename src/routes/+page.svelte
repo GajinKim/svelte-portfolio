@@ -27,7 +27,7 @@
     }
 
     .cat {
-        padding-top: max(80px, 6vh);
+        padding-top: min(140px, 14vh);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,13 +46,13 @@
     }
 
     .subtitle {
-        font-size:  clamp(30px, 5vw, 45px);
+        font-size:  clamp(25px, 4vw, 40px);
         margin-top: 50px;
         color: $color-white;
     }
 
     .aws-subtitle {
-        line-height: clamp(20px, 6vw, 50px);
+        line-height: clamp(25px, 6vw, 50px);
         text-shadow: $blink-orange;
         color: $color-white;
         text-align: center;
@@ -60,7 +60,7 @@
     }
 
     .swe-subtitle {
-        line-height: clamp(20px, 6vw, 40px);
+        line-height: clamp(25px, 6vw, 40px);
         text-shadow: $blink-purple;
         color: $color-white;
         text-align: center;
@@ -68,7 +68,7 @@
     }
     
     .coffee-subtitle {
-        line-height: clamp(20px, 6vw, 40px);
+        line-height: clamp(25px, 6vw, 40px);
         text-shadow: $blink-brown;
         color: $color-white;
         text-align: center;
@@ -121,7 +121,7 @@
             Specializing in <span class="aws-subtitle">AWS Cloud Architecture</span>, let's turn <b>bold ideas</b> into <b>reality</b>!
         </p> -->
         <p class="subtitle"> 
-            / * 
+            /* 
             <br>
             <b class="swe-subtitle">Software</b> 
             Engineer,
@@ -132,7 +132,7 @@
             <b class="coffee-subtitle">Coffee & Boba </b>
             Extraordinaire
             <br>
-            * /
+            */
         </p>
     </div>
     <AboutPage /> <!-- add a section where i add my aws certificates-->

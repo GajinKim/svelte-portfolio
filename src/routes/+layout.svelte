@@ -26,6 +26,7 @@
 
         display: flex;
         justify-content: space-evenly;
+        position: sticky;
 
         padding-top: max(50px, 2vh);
         padding-bottom: max(50px, 2vh);
