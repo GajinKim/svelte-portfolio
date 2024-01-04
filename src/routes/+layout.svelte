@@ -19,14 +19,19 @@
     $color-white: #f4f3d7;
     $color-beige: #ecc298;
 
-    .navbar {
+    nav {
+        background-color: $color-black;
+
         font-family: "Amatic SC", sans-serif;
         font-size:  clamp(25px, 4vw, 30px);
         font-weight: bold;
 
+        top: 0;
+        position: sticky;
+        z-index: 1;
+
         display: flex;
         justify-content: space-evenly;
-        position: sticky;
 
         padding-top: max(50px, 2vh);
         padding-bottom: max(50px, 2vh);

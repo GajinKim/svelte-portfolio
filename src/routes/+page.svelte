@@ -17,6 +17,7 @@
 
     :global(body) {
         background-color: $color-black;
+        margin: 0;
     }
 
     #home-page {
@@ -121,7 +122,7 @@
             Specializing in <span class="aws-subtitle">AWS Cloud Architecture</span>, let's turn <b>bold ideas</b> into <b>reality</b>!
         </p> -->
         <p class="subtitle"> 
-            /* 
+            /*
             <br>
             <b class="swe-subtitle">Software</b> 
             Engineer,

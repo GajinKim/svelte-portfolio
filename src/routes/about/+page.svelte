@@ -8,7 +8,7 @@
         text-align: center;
         /* padding-left: max(5px, 20vw);
         padding-right: max(5px, 20vw); */
-        height: 500px;
+        height: 5100px;
         background-color: $color-beige;
         /* position: absolute; */
     }
