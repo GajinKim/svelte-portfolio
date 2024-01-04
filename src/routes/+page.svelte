@@ -23,32 +23,33 @@
     #home-page {
         font-family: "Amatic SC", sans-serif;
         text-align: center;
-        height: min(950px, 85vh);
+        min-height: min(950px, 85vh);
         position: sticky;
+        overflow: hidden;
     }
 
     .cat {
-        padding-top: min(140px, 14vh);
+        padding-top: min(140px, 10vh);
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
     .name-intro {
-        font-size: clamp(80px, 16vw, 120px);
+        font-size: clamp(50px, 16vw, 120px);
         margin: 0;
         color: $color-beige;
     }
 
     .name {
-        font-size: clamp(80px, 16vw, 120px);
+        font-size: clamp(50px, 16vw, 120px);
         margin: 0;
         color: $color-white;
     }
 
     .subtitle {
         font-size:  clamp(25px, 4vw, 40px);
-        margin-top: 50px;
+        margin-top: 40px;
         color: $color-white;
     }
 
