@@ -21,7 +21,7 @@
         margin: 0;
     }
 
-    #home-page {
+    #home {
         font-family: "Amatic SC", sans-serif;
         text-align: center;
         min-height: min(950px, 85vh);
@@ -113,7 +113,7 @@
 </style>
 
 <main>
-    <div id="home-page">
+    <div id="home">
         <div class="cat">
             <Cat/>
         </div>
