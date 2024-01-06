@@ -24,13 +24,20 @@
     #home {
         font-family: "Amatic SC", sans-serif;
         text-align: center;
-        min-height: min(950px, 85vh);
         position: sticky;
         overflow: hidden;
+        
+        // deadspace padding for desktop users
+        @media (pointer:none), (pointer:coarse) {
+            min-height: 85vh;
+        }
+
+        
+        padding-top: 10vh;
+        // padding-bottom: max(2vh);
     }
 
     .cat {
-        padding-top: min(140px, 10vh);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -119,10 +126,7 @@
         </div>
         
         <p class="name"><span class="name-intro">Hi, I'm </span>Gajin</p>
-        <!-- move this to below in the about me section -->
-        <!-- <p class="subtitle">Software Consultant at Source Allies with <span class="aws-subtitle">4+ years of experience</span>. <br/>
-            Specializing in <span class="aws-subtitle">AWS Cloud Architecture</span>, let's turn <b>bold ideas</b> into <b>reality</b>!
-        </p> -->
+ 
         <p class="subtitle"> 
             /*
             <br>
@@ -138,10 +142,11 @@
             */
         </p>
     </div>
-    <div id="about">
-        <AboutPage /> <!-- add a section where i add my aws certificates-->
-    </div>
-    <div id="work">
-        <WorkPage /> <!-- add a section where i add my aws certificates-->
-    </div>
+
+    <div id="about" />
+    <AboutPage /> <!-- add a section where i add my aws certificates-->
+    
+    <div id="work" />
+    <WorkPage /> <!-- add a section where i add my aws certificates-->
+
 </main>
