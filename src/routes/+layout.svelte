@@ -31,13 +31,15 @@
         z-index: 1;
 
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
 
         padding-top: max(50px, 2vh);
         padding-bottom: max(50px, 2vh);
+
+        // deadspace padding for desktop users
         @media (pointer:fine) {
-            padding-left: 20vw;
-            padding-right: 20vw;
+            padding-left: 30vw;
+            padding-right: 30vw;
         }
     }
 

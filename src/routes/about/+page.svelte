@@ -4,9 +4,7 @@
 
     // import Icon from 'virtual:icons/foo/icon-name';
     
-    
-    
-    </script>
+</script>
 
 <style lang="scss">
     $color-black: #100c08;
