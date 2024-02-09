@@ -6,7 +6,6 @@
     import WorkPage from '../routes/work/+page.svelte'
 </script>
 
-
 <style lang="scss">
     $color-black: #100c08;
     $color-white: #f4f3d7;
@@ -142,6 +141,6 @@
         <AboutPage /> <!-- add a section where i add my aws certificates-->
     </div>
     <div id="work">
-        <WorkPage /> <!-- add a section where i add my aws certificates-->
+        <WorkPage /> 
     </div>
 </main>

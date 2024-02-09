@@ -43,3 +43,9 @@ You can preview the production build with `npm run preview`.
 - [How to use sass in sveltekit](https://www.youtube.com/watch?v=UzjJ5orVoxk)
 - [Cat](https://codepen.io/johanmouchet/pen/OXxvqM)
 - [Deploying Svelte to Github Pages](https://kit.svelte.dev/docs/adapter-static)
+
+Adding Icons
+- https://github.com/unplugin/unplugin-icons
+- specifically for sveltekit `https://github.com/unplugin/unplugin-icons/tree/main/examples/sveltekit`
+- npm package: `https://www.npmjs.com/package/unplugin-icons`
+- example import: `https://github.com/unplugin/unplugin-icons/blob/main/examples/sveltekit/src/routes/%2Bpage.svelte`

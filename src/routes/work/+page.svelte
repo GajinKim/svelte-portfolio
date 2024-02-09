@@ -1,1 +1,3 @@
-<p>settings page</p>
+<p style="background-color:red;">
+    stuff
+</p>
