@@ -37,8 +37,6 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 
-
-
 ### Helpful References 
 - [How to use sass in sveltekit](https://www.youtube.com/watch?v=UzjJ5orVoxk)
 - [Cat](https://codepen.io/johanmouchet/pen/OXxvqM)
