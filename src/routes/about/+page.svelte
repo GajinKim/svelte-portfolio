@@ -27,13 +27,6 @@
 
 <main>
 <h1>About Me</h1>
-    <br>
-    <br>
-
-    <br>
-    <br>
-    </p>
-    <br>
 <h1>Skills</h1>
 
 <SvelteLogo style="font-size:2em" />
